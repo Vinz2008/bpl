@@ -5,11 +5,15 @@ while True:
         break
     elif instruction == "PRINT":
         other = text.split(' ', 1)[1]
-        string = other.replace('"', '')
-        print(string)
+        if other == "last_input":
+            print(last_input)
+        else:
+            string = other.replace('"', '')
+            print(string)
     elif instruction == "INPUT":
         other = text.split(' ', 1)[1]
+
         question = other.replace('"', '')
-        input(question + ' ')
+        last_input = input(question + ' ')
     else:
         print(text)
