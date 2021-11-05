@@ -7,8 +7,7 @@ for line in Lines:
     instruction = text.split(' ', 1)[0]
     if instruction == "PRINT":
         other = text.split(' ', 1)[1]
-        print('"' + other + '"')
-        if other == "last_input":
+        if other == "last_input\n":
             print(last_input)
         else:
             string = other.replace('"', '')
